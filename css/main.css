@@ -83,7 +83,7 @@ body {
 .layers__caption {
     font-size: calc(var(--index) * 0.9);
     letter-spacing: calc(var(--index) / 3.75);
-    margin-top: calc(var(--index) * -1.5);
+    margin-top: calc(var(--index) * -5);
 }
 .main-article {
     --main-article-parallax: translate3d(0, calc(var(--scrollTop) / -14), 0);
@@ -106,7 +106,7 @@ body {
     will-change: transform;
 }
 .main-article__paragraph {
-    max-width: calc(var(--index) * 30);
+    max-width: calc(var(--index) * 40);
     font-size: calc(var(--index) * 0.9);
     margin-top: calc(var(--index) / 1.25);
     transform: var(--main-article-parallax);
