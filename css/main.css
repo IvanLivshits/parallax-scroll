@@ -106,7 +106,7 @@ body {
     will-change: transform;
 }
 .main-article__paragraph {
-    max-width: calc(var(--index) * 40);
+    max-width: calc(var(--index) * 60);
     font-size: calc(var(--index) * 0.9);
     margin-top: calc(var(--index) / 1.25);
     transform: var(--main-article-parallax);
