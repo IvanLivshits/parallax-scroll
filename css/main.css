@@ -5,6 +5,7 @@
 }
 :root {
     --index: calc(1vw + 1vh);
+    --text-color: #fdfdb9;
 }
 @font-face {
     font-family: raleway_f;
@@ -69,7 +70,7 @@ body {
     will-change: transform;
     text-transform: uppercase;
     font-weight: 900;
-    color: #fdfdb9;
+    color: var(--text-color);
     text-shadow: 0 0 15px #dfe70d;
 }
 .layers__title {
@@ -82,5 +83,35 @@ body {
     margin-top: calc(var(--index) * -1.5);
 }
 .main-article {
+    --main-article-parallax: translate3d(0, calc(var(--scrollTop) / -14), 0);
     min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
 } 
+.main-article__header {
+    text-transform: uppercase;
+    font-size: calc(var(--index) * 2);
+    letter-spacing: calc(var(--index) / 7.5);
+    transform: var(--main-article-parallax);
+    will-change: transform;
+}
+.main-article__paragraph {
+    max-width: calc(var(--index) * 30);
+    font-size: calc(var(--index) * 0.9);
+    margin-top: calc(var(--index) / 1.25);
+    transform: var(--main-article-parallax);
+    will-change: transform;
+}
+.copy {
+    position: absolute;
+    bottom: calc(var(--index) * 2.5);
+    opacity: .45;
+    font-size: calc(var(--index) * 0.75);
+    letter-spacing: calc(var(--index) / 37.5);
+}
