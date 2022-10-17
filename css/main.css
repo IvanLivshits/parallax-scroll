@@ -6,6 +6,7 @@
 :root {
     --index: calc(1vw + 1vh);
     --text-color: #fdfdb9;
+    --transition: transform .75s cubic-bezier(0.075, 0.5, 0, 1);
 }
 @font-face {
     font-family: raleway_f;
@@ -53,6 +54,7 @@ body {
     background-position: center;
     will-change: transform;
     z-index: 2;
+    transition: var(--transition);
 }
 .layer__base {
     transform: translate3d(0, calc(var(--scrollTop) / 1.25), 0);
@@ -67,6 +69,7 @@ body {
 .layers__header {
     z-index: 1;
     transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+    transition: var(--transition);
     will-change: transform;
     text-transform: uppercase;
     font-weight: 900;
@@ -99,6 +102,7 @@ body {
     font-size: calc(var(--index) * 2);
     letter-spacing: calc(var(--index) / 7.5);
     transform: var(--main-article-parallax);
+    transition: var(--transition);
     will-change: transform;
 }
 .main-article__paragraph {
@@ -106,6 +110,10 @@ body {
     font-size: calc(var(--index) * 0.9);
     margin-top: calc(var(--index) / 1.25);
     transform: var(--main-article-parallax);
+    transition: var(--transition);
+    will-change: transform;
+}
+.content {
     will-change: transform;
 }
 .copy {
