@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root {
-
+    --index: calc(1vw + 1vh);
 }
 @font-face {
     font-family: raleway_f;
@@ -17,7 +17,6 @@
 }
 body {
     background-color: #010101;
-    color: white;
     font-family: railway_f, sans-serif;
     line-height: 1.55;
 }
@@ -55,6 +54,20 @@ body {
 .layers__header {
     z-index: 1;
     transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+    will-change: transform;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #fdfdb9;
+    text-shadow: 0 0 15px #dfe70d;
+}
+.layers__title {
+    font-size: calc(var(--index) * 2.5);
+    letter-spacing: calc(var(--index) / 2.25);
+}
+.layers__caption {
+    font-size: calc(var(--index) * 0.9);
+    letter-spacing: calc(var(--index) / 3.75);
+    margin-top: calc(var(--index) * -1.5);
 }
 .main-article {
     min-height: 100vh;
