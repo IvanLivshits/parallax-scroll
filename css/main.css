@@ -21,3 +21,41 @@ body {
     font-family: railway_f, sans-serif;
     line-height: 1.55;
 }
+.main-header {
+    position: relative;
+}
+.layers {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: 2;
+}
+.layer__base {
+    transform: translate3d(0, calc(var(--scrollTop) / 1.25), 0);
+    z-index: 0;
+}
+.layer__middle {
+    transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0); 
+}
+.layer__front {
+    transform: translate3d(0, calc(var(--scrollTop) / 5), 0); 
+}
+.layers__header {
+    z-index: 1;
+    transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+}
+.main-article {
+    min-height: 100vh;
+} 
